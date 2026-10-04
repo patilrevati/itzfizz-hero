@@ -27,7 +27,7 @@ export default function Hero() {
         .timeline({ defaults: { ease: "power3.out" } })
         .from(".letter", { y: 40, opacity: 0, duration: 0.9, stagger: 0.05 })
         .from(".stat", { y: 30, opacity: 0, duration: 0.8, stagger: 0.25 }, "-=0.3")
-        .from(car.current, { x: -60, opacity: 0, duration: 1 }, "-=1");
+        .from(car.current, { opacity: 0, duration: 1 }, "-=1");
 
       // 2) Scroll: progress-based, pinned and scrubbed with 1s smoothing
       const travel = () => window.innerWidth - car.current.offsetWidth * 0.8;
