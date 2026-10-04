@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-ink text-neutral-100 antialiased; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
