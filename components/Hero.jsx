@@ -53,8 +53,8 @@ export default function Hero() {
         .to(".letter", { y: -30, opacity: 0.15, stagger: 0.03, ease: "none", duration: 0.8 }, 0.1)
         .to(".stat", { y: -40, stagger: 0.08, ease: "none", duration: 0.8 }, 0.1);
     }, root);
-
-    return () => ctx.revert();
+    const t = setTimeout(() => ScrollTrigger.refresh(), 300);
+    return () => { clearTimeout(t); ctx.revert(); };
   }, []);
 
   return (
